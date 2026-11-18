@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solmar Bay — Open World Crime</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.min.js" } }
+</script>
+</head>
+<body>
+<div id="app"></div>
+
+<div id="hud">
+  <div id="hud-top">
+    <div id="money">$0</div>
+    <div id="stars">☆☆☆☆☆</div>
+    <div id="health-bar"><div id="health-fill"></div></div>
+    <div id="objective"></div>
+    <div id="ammo">AMMO 12/12</div>
+  </div>
+  <div id="speed">0 km/h</div>
+  <div id="mission-list"></div>
+  <canvas id="minimap" width="150" height="150"></canvas>
+  <div id="toasts"></div>
+  <div id="crosshair">+</div>
+</div>
+<div id="damage-flash"></div>
+
+<div id="menu">
+  <h1>SOLMAR BAY</h1>
+  <p class="tag">An open-world crime story. Steal cars. Outrun the cops. Pay the debt.</p>
+  <p class="story">Jax Marlowe owes loan shark Sal Bianchi $5,000. Five jobs across the city
+  stand between Jax and freedom — if the Solmar Bay PD doesn't catch him first.</p>
+  <div class="controls">
+    <div><b>WASD</b> move / drive</div>
+    <div><b>Mouse</b> look (click to lock)</div>
+    <div><b>E</b> steal / exit car</div>
+    <div><b>Click</b> shoot / punch</div>
+    <div><b>1 / 2</b> pistol / fists</div>
+    <div><b>R</b> reload &nbsp; <b>P</b> pause</div>
+  </div>
+  <button id="btn-new">NEW GAME</button>
+  <button id="btn-continue">CONTINUE</button>
+</div>
+
+<div id="pause" class="hidden">PAUSED — press P to resume</div>
+
+<div id="end-screen" class="hidden">
+  <h1 id="end-title"></h1>
+  <p id="end-text"></p>
+  <button id="btn-end">CONTINUE</button>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
